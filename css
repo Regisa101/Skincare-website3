@@ -26,7 +26,7 @@ nav {
   border-bottom: 1px solid black;
   justify-content: space-between;
   align-items: center;
- /* box-shadow: 0 2px 5px rgba(0,0,0,0.05);*/
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -37,8 +37,9 @@ nav {
   font-family: 'Spartan', sans-serif;
   font-size: 24px;
   font-weight: 600;
+  color: #3A3A3A;
+  text-decoration: none;
 }
-
 
 .nav-links {
   display: flex;
@@ -58,8 +59,53 @@ nav {
   border-bottom: 3px solid black;
 }
 
+/* Container for dropdown */
+.dropdown {
+  position: relative; /* needed for absolute positioning of submenu */
+  display: block;
+}
+
+/* Dropdown menu - hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1001;
+  margin-top: 8px;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+/* Dropdown menu links */
+.dropdown-content a {
+  color: #3A3A3A;
+  padding: 8px 20px;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+}
+
+/* Hover effect for submenu items */
+.dropdown-content a:hover {
+  border-bottom: 3px solid black;
+  color: black;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Optional: change main link color on hover */
+.dropdown:hover .dropbtn {
+  border-bottom: 3px solid black;
+}
+
+
 /* Hero Section */
-.hero {
+/*.hero {
   margin: 0;
   display: flex;
   justify-content: space-between;
@@ -94,31 +140,13 @@ nav {
   font-size: 50px;
   margin-bottom: 0 0 30px 0;
   text-align: left;
-}
-
-.hero-image{
-  flex: 1; 
-  display: flex;
-  align-items: flex-start;
-  padding: 0;
-  margin: 0;
-  justify-content: flex-end;
-}
-
-.hero-image img {
-  max-width: 525px;
-  height: auto;
-  display: block:
-  max-width: 500px;
-  object-fit: contain;
-  margin-top: 0;
-}
-
+}*/
+/*
 .btn {
   padding: 30px 60px;
   background-color: #3A3A3A;
   border: none;
-  border-radius: 20px;
+  border-radius: 30px;
   color: white;
   font-size: 24px;
   cursor: pointer;
@@ -127,7 +155,7 @@ nav {
 
 .btn:hover {
   background-color: #000000;
-}
+}*/
 /* Cart & User Icon Styling */
 .icon-link {
   position: relative;
