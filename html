@@ -5,36 +5,291 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GlowHouse - Skincare You Deserve</title>
   <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@600&family=Poppins:wght@400;500&family=Dancing+Script&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav>
+  <nav class="navbar">
+  <div class="navbar-left">
     <a href="Skin.html" class="logo">Glow<span>House</span></a>
+
     <div class="nav-links">
-      <a href="#">Shop</a>
       <div class="dropdown">
-      <a href="#" class="dropbtn">Products</a>
-      <div class="dropdown-content">
-        <a href="#">Dry</a>
-        <a href="#">Combination</a>
-        <a href="#">Oily</a>
+        <a href="#" class="dropbtn">Shop</a>
+        <div class="dropdown-content">
+          <a href="#">Minimalist</a>
+          <a href="#">Centella</a>
+          <a href="#">CeraVe</a>
+        </div>
       </div>
-    </div>
+
+      <div class="dropdown">
+        <a href="#" class="dropbtn">Products</a>
+        <div class="dropdown-content">
+          <a href="#">Dry</a>
+          <a href="#">Combination</a>
+          <a href="#">Oily</a>
+        </div>
+      </div>
+
       <a href="#">Best Seller</a>
       <a href="#">About Us</a>
-      <a href="#">Contact</a>
-      <a href="#" class="icon-link"><i class="fa-solid fa-user"></i></a>
-      <a href="#" class="icon-link"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count">0</span></a>
+      <a href="#">Collection</a>
     </div>
-  </nav>
+  </div>
 
- <!--<section class="hero">
-   <div class="hero-text">
-    <h1>Glow Naturally, Feel Beautiful</h1>
-    <p>Shop gentle skincare from trusted brands made for real skin.</p>
-    <button class="btn">Shop Now</button>
-   </div>
-   
-  </section>-->
+  <div class="navbar-right">
+    <a href="#" class="icon-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+    <a href="#" class="icon-link"><i class="fa-solid fa-user"></i></a>
+    <a href="#" class="icon-link">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span class="cart-count">0</span>
+    </a>
+  </div>
+</nav>
+<section class="hero-slider">
+  <div class="slide active" style="background-image: url('Landing.png')">
+    <div class="slide-content">
+      <h1>Reveal Your Glow</h1>
+      <p>Gentle care for radiant skin</p>
+      <a href="#" class="cta-btn">Shop Now</a>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('images/slide2.jpg')">
+    <div class="slide-content">
+      <h1>Centella Collection</h1>
+      <p>Soothing power from nature</p>
+      <a href="#" class="cta-btn">Explore</a>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('images/slide3.jpg')">
+    <div class="slide-content">
+      <h1>Minimalist Skincare</h1>
+      <p>Less ingredients, more results</p>
+      <a href="#" class="cta-btn">View Range</a>
+    </div>
+  </div>
+
+  <!-- Optional: Add 2 more slides if you want -->
+  <div class="slider-controls">
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+  </div>
+</section>
+
+
+ <!-- Best Sellers Section -->
+<section class="best-sellers">
+  <h2>Our Best Sellers</h2>
+  <div class="product-slider-container">
+    <div class="product-slider" id="productSlider">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="toner.jpg" alt="Salicylic Acid Cleanser">
+        <h3>Salicylic Acid + LHA 2% Cleanser</h3>
+        <p class="desc">Acne, Breakouts & Oiliness</p>
+        <p class="rating">★★★★☆</p>
+        <p class="price">On Sale from ₹ 269</p>
+        <button class="cart-btn" onclick="addToCart('Salicylic Acid Cleanser')">Add to Cart</button>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="product2.jpg" alt="SPF 50 Sunscreen">
+        <h3>SPF 50 Sunscreen</h3>
+        <p class="desc">Sun protection, UV exposure / damage</p>
+        <p class="rating">★★★★☆</p>
+        <p class="price">On Sale from ₹ 359</p>
+        <button class="cart-btn" onclick="addToCart('SPF 50 Sunscreen')">Add to Cart</button>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="product3.jpg" alt="Face Serum">
+        <h3>Salicylic Acid 2% Face Serum</h3>
+        <p class="desc">Acne, Oily Skin, Blackheads & Irritation</p>
+        <p class="rating">★★★★☆</p>
+        <p class="price">On Sale from ₹ 494</p>
+        <button class="cart-btn" onclick="addToCart('Face Serum')">Add to Cart</button>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <img src="product4.jpg" alt="Vitamin C Serum">
+        <h3>Vitamin C 10% Face Serum</h3>
+        <p class="desc">Dullness, Spots & Loss of Elasticity</p>
+        <p class="rating">★★★★☆</p>
+        <p class="price"><del>₹ 699</del> ₹ 629</p>
+        <button class="cart-btn" onclick="addToCart('Vitamin C Serum')">Add to Cart</button>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card">
+        <img src="product5.jpg" alt="Moisturizer">
+        <h3>Oil-Free Moisturizer</h3>
+        <p class="desc">Hydration without heaviness</p>
+        <p class="rating">★★★★☆</p>
+        <p class="price">₹ 399</p>
+        <button class="cart-btn" onclick="addToCart('Moisturizer')">Add to Cart</button>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <img src="product6.jpg" alt="Retinol Serum">
+        <h3>Retinol Anti-Aging Serum</h3>
+        <p class="desc">Fine lines & wrinkles</p>
+        <p class="rating">★★★★★</p>
+        <p class="price">₹ 499</p>
+        <button class="cart-btn" onclick="addToCart('Retinol Serum')">Add to Cart</button>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product-card">
+        <img src="product7.jpg" alt="Cleanser">
+        <h3>Gentle Foaming Cleanser</h3>
+        <p class="desc">Everyday cleansing</p>
+        <p class="rating">★★★☆☆</p>
+        <p class="price">₹ 289</p>
+        <button class="cart-btn" onclick="addToCart('Cleanser')">Add to Cart</button>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product-card">
+        <img src="product8.jpg" alt="Toner">
+        <h3>Centella Calming Toner</h3>
+        <p class="desc">Soothe and balance</p>
+        <p class="rating">★★★★☆</p>
+        <p class="price">₹ 349</p>
+        <button class="cart-btn" onclick="addToCart('Toner')">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Dash Navigation -->
+    <div class="dot-nav" id="bestSellerDots">
+      <span class="dot active" onclick="goToProductSlide(0)"></span>
+      <span class="dot" onclick="goToProductSlide(1)"></span>
+    </div>
+  </div>
+  <div class="view-all">
+    <button>View all products</button>
+  </div>
+</section>
+
+<hr style="border: 0.5px solid #ddd; margin: 60px 0;">
+
+<!-- PRODUCT LINE SECTION (3 nicely aligned clickable items) -->
+<section class="product-lines">
+  <h2>Product Lines</h2>
+  <div class="product-line-grid">
+    <div class="product-line">
+      <a href="#"><img src="anua.jpg" alt="Anua"></a>
+      <h3>Anua</h3>
+    </div>
+    <div class="product-line">
+      <a href="#"><img src="centella.jpg" alt="Centella"></a>
+      <h3>Centella</h3>
+    </div>
+    <div class="product-line">
+      <a href="#"><img src="minimalist.jpg" alt="Minimalist"></a>
+      <h3>Minimalist</h3>
+    </div>
+  </div>
+  <div class="view-all">
+    <button>View all product lines</button>
+  </div>
+</section>
+
+
+
+ <footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-column">
+      <h3>SKIN1004</h3>
+      <p><strong>Customer Service :</strong> hello@skin1004korea.com</p>
+      <p><strong>Wholesale Inquiry :</strong> sales@skin1004korea.com</p>
+      <p>Whatever touches the skin must be pure. Let us deliver you the untouched nature and its purity to your skin, to help you discover your best skin.</p>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-tiktok"></i>
+        <i class="fab fa-pinterest-p"></i>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h4>HELP</h4>
+      <ul>
+        <li><a href="#">Stores</a></li>
+        <li><a href="#">Become A Partner</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>POLICY</h4>
+      <ul>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Refund Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Subscribe to our emails</h4>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Email" />
+        <button type="submit">SUBSCRIBE</button>
+      </form>
+      <p>Craver Corporation<br>
+        CEO: Juhyck Cheun<br>
+        Company Location: 11th-12th Floor, Gangnam N Tower, 129 Teheran-ro, Gangnam-gu, Seoul, Republic of Korea<br>
+        Company Registration Number: 261-81-14845
+      </p>
+      <p><strong>FLAGSHIP STORE</strong><br>
+        29, Myeongdong 6-gil, Jung-gu, Seoul, Republic of Korea
+      </p>
+    </div>
+
+  </div>
+</footer>
+<script>
+const slides = document.querySelectorAll('.slide');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+let current = 0;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) {
+      slide.classList.add('active');
+    }
+  });
+}
+
+function nextSlide() {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}
+
+function prevSlide() {
+  current = (current - 1 + slides.length) % slides.length;
+  showSlide(current);
+}
+
+next.addEventListener('click', nextSlide);
+prev.addEventListener('click', prevSlide);
+
+// Auto-slide every 5 seconds
+setInterval(nextSlide, 5000);
+
+</script>
+
 </body>
 </html>
