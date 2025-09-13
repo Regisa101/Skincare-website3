@@ -1,30 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GlowHouse - Skincare You Deserve</title>
-  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@600&family=Poppins:wght@400;500&family=Dancing+Script&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow House</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-  <div class="navbar-left">
-    <a href="Skin.html" class="logo">Glow<span>House</span></a>
 
-    <div class="nav-links">
+  <!-- Navbar -->
+  <header class="navbar">
+  <div class="container"> <!-- 🆕 Wrap starts here -->
+    <div class="navbar-top">
+      <div class="search-box">
+  <input type="text" placeholder="Search..." />
+  <button class="search-btn">
+    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+  </button>
+</div>
+      <div class="logo">Glow House</div>
+      <div class="nav-icons">
+        <i class="fa-solid fa-user"></i>
+        <div class="cart-icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </div>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <nav class="nav-menu">
       <div class="dropdown">
-        <a href="#" class="dropbtn">Shop</a>
+        <a href="#">Shop</a>
         <div class="dropdown-content">
-          <a href="#">Minimalist</a>
+          <a href="#">Anua</a>
           <a href="#">Centella</a>
-          <a href="#">CeraVe</a>
+          <a href="#">Minimalist</a>
         </div>
       </div>
 
       <div class="dropdown">
-        <a href="#" class="dropbtn">Products</a>
+        <a href="#">Products</a>
         <div class="dropdown-content">
           <a href="#">Dry</a>
           <a href="#">Combination</a>
@@ -32,263 +57,393 @@
         </div>
       </div>
 
-      <a href="#">Best Seller</a>
+      <a href="#">Best Sellers</a>
       <a href="#">About Us</a>
       <a href="#">Collection</a>
-    </div>
-  </div>
-
-  <div class="navbar-right">
-    <a href="#" class="icon-link"><i class="fa-solid fa-magnifying-glass"></i></a>
-    <a href="#" class="icon-link"><i class="fa-solid fa-user"></i></a>
-    <a href="#" class="icon-link">
-      <i class="fa-solid fa-cart-shopping"></i>
-      <span class="cart-count">0</span>
-    </a>
-  </div>
-</nav>
-<section class="hero-slider">
-  <div class="slide active" style="background-image: url('Landing.png')">
-    <div class="slide-content">
-      <h1>Reveal Your Glow</h1>
-      <p>Gentle care for radiant skin</p>
-      <a href="#" class="cta-btn">Shop Now</a>
-    </div>
-  </div>
-
-  <div class="slide" style="background-image: url('images/slide2.jpg')">
-    <div class="slide-content">
-      <h1>Centella Collection</h1>
-      <p>Soothing power from nature</p>
-      <a href="#" class="cta-btn">Explore</a>
-    </div>
-  </div>
-
-  <div class="slide" style="background-image: url('images/slide3.jpg')">
-    <div class="slide-content">
-      <h1>Minimalist Skincare</h1>
-      <p>Less ingredients, more results</p>
-      <a href="#" class="cta-btn">View Range</a>
-    </div>
-  </div>
-
-  <!-- Optional: Add 2 more slides if you want -->
-  <div class="slider-controls">
-    <span class="prev">&#10094;</span>
-    <span class="next">&#10095;</span>
-  </div>
-</section>
+    </nav>
+  </div> <!-- 🆕 Wrap ends here -->
+</header>
 
 
- <!-- Best Sellers Section -->
-<section class="best-sellers">
-  <h2>Our Best Sellers</h2>
-  <div class="product-slider-container">
-    <div class="product-slider" id="productSlider">
-      <!-- Product 1 -->
-      <div class="product-card">
-        <img src="toner.jpg" alt="Salicylic Acid Cleanser">
-        <h3>Salicylic Acid + LHA 2% Cleanser</h3>
-        <p class="desc">Acne, Breakouts & Oiliness</p>
-        <p class="rating">★★★★☆</p>
-        <p class="price">On Sale from ₹ 269</p>
-        <button class="cart-btn" onclick="addToCart('Salicylic Acid Cleanser')">Add to Cart</button>
+  <!-- Hero Slider -->
+<section class="hero">
+  <div class="slider-container">
+    <div class="slider-track">
+      <div class="slide" style="background-image: url('Landing.png');">
+        <div class="text-box">
+          <h1>Reveal Your Natural Glow</h1>
+          <p>Gentle skincare made with pure ingredients.</p>
+        </div>
       </div>
-
-      <!-- Product 2 -->
-      <div class="product-card">
-        <img src="product2.jpg" alt="SPF 50 Sunscreen">
-        <h3>SPF 50 Sunscreen</h3>
-        <p class="desc">Sun protection, UV exposure / damage</p>
-        <p class="rating">★★★★☆</p>
-        <p class="price">On Sale from ₹ 359</p>
-        <button class="cart-btn" onclick="addToCart('SPF 50 Sunscreen')">Add to Cart</button>
+      <div class="slide" style="background-image: url('The Ordinary.jpg');">
+        <div class="text-box">
+          <h1>Glow with Confidence</h1>
+          <p>Healthy skin is beautiful skin.</p>
+        </div>
       </div>
-
-      <!-- Product 3 -->
-      <div class="product-card">
-        <img src="product3.jpg" alt="Face Serum">
-        <h3>Salicylic Acid 2% Face Serum</h3>
-        <p class="desc">Acne, Oily Skin, Blackheads & Irritation</p>
-        <p class="rating">★★★★☆</p>
-        <p class="price">On Sale from ₹ 494</p>
-        <button class="cart-btn" onclick="addToCart('Face Serum')">Add to Cart</button>
-      </div>
-
-      <!-- Product 4 -->
-      <div class="product-card">
-        <img src="product4.jpg" alt="Vitamin C Serum">
-        <h3>Vitamin C 10% Face Serum</h3>
-        <p class="desc">Dullness, Spots & Loss of Elasticity</p>
-        <p class="rating">★★★★☆</p>
-        <p class="price"><del>₹ 699</del> ₹ 629</p>
-        <button class="cart-btn" onclick="addToCart('Vitamin C Serum')">Add to Cart</button>
-      </div>
-
-      <!-- Product 5 -->
-      <div class="product-card">
-        <img src="product5.jpg" alt="Moisturizer">
-        <h3>Oil-Free Moisturizer</h3>
-        <p class="desc">Hydration without heaviness</p>
-        <p class="rating">★★★★☆</p>
-        <p class="price">₹ 399</p>
-        <button class="cart-btn" onclick="addToCart('Moisturizer')">Add to Cart</button>
-      </div>
-
-      <!-- Product 6 -->
-      <div class="product-card">
-        <img src="product6.jpg" alt="Retinol Serum">
-        <h3>Retinol Anti-Aging Serum</h3>
-        <p class="desc">Fine lines & wrinkles</p>
-        <p class="rating">★★★★★</p>
-        <p class="price">₹ 499</p>
-        <button class="cart-btn" onclick="addToCart('Retinol Serum')">Add to Cart</button>
-      </div>
-
-      <!-- Product 7 -->
-      <div class="product-card">
-        <img src="product7.jpg" alt="Cleanser">
-        <h3>Gentle Foaming Cleanser</h3>
-        <p class="desc">Everyday cleansing</p>
-        <p class="rating">★★★☆☆</p>
-        <p class="price">₹ 289</p>
-        <button class="cart-btn" onclick="addToCart('Cleanser')">Add to Cart</button>
-      </div>
-
-      <!-- Product 8 -->
-      <div class="product-card">
-        <img src="product8.jpg" alt="Toner">
-        <h3>Centella Calming Toner</h3>
-        <p class="desc">Soothe and balance</p>
-        <p class="rating">★★★★☆</p>
-        <p class="price">₹ 349</p>
-        <button class="cart-btn" onclick="addToCart('Toner')">Add to Cart</button>
+      <div class="slide" style="background-image: url('centella.jpg');">
+        <div class="text-box">
+          <h1>Hydrate. Calm. Restore.</h1>
+          <p>Centella-powered skincare just for you.</p>
+        </div>
       </div>
     </div>
-
-    <!-- Dash Navigation -->
-    <div class="dot-nav" id="bestSellerDots">
-      <span class="dot active" onclick="goToProductSlide(0)"></span>
-      <span class="dot" onclick="goToProductSlide(1)"></span>
+    <div class="slider-dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
     </div>
-  </div>
-  <div class="view-all">
-    <button>View all products</button>
-  </div>
-</section>
-
-<hr style="border: 0.5px solid #ddd; margin: 60px 0;">
-
-<!-- PRODUCT LINE SECTION (3 nicely aligned clickable items) -->
-<section class="product-lines">
-  <h2>Product Lines</h2>
-  <div class="product-line-grid">
-    <div class="product-line">
-      <a href="#"><img src="anua.jpg" alt="Anua"></a>
-      <h3>Anua</h3>
-    </div>
-    <div class="product-line">
-      <a href="#"><img src="centella.jpg" alt="Centella"></a>
-      <h3>Centella</h3>
-    </div>
-    <div class="product-line">
-      <a href="#"><img src="minimalist.jpg" alt="Minimalist"></a>
-      <h3>Minimalist</h3>
-    </div>
-  </div>
-  <div class="view-all">
-    <button>View all product lines</button>
   </div>
 </section>
 
 
 
- <footer class="site-footer">
-  <div class="footer-container">
-    
-    <div class="footer-column">
-      <h3>SKIN1004</h3>
-      <p><strong>Customer Service :</strong> hello@skin1004korea.com</p>
-      <p><strong>Wholesale Inquiry :</strong> sales@skin1004korea.com</p>
-      <p>Whatever touches the skin must be pure. Let us deliver you the untouched nature and its purity to your skin, to help you discover your best skin.</p>
-      <div class="social-icons">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-youtube"></i>
-        <i class="fab fa-tiktok"></i>
-        <i class="fab fa-pinterest-p"></i>
+  <!-- Best Sellers -->
+<!-- Best Sellers (Carousel) -->
+<section class="best-sellers" id="best-sellers">
+  <div class="container">
+    <div class="bs-header">
+      <h2>Our Bestsellers</h2>
+    <div class="bs-carousel" tabindex="0">
+      <div class="bs-track">
+        <!-- 8+ product cards -->
+        <article class="product-card" data-id="1">
+          <div class="card-media">
+            <img src="centella.jpg" alt="Gentle Facial Cleanser">
+            <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          </div>
+          <h3 class="product-name">Gentle Facial Cleanser</h3>
+          <div class="product-price"><span class="old-price">$39.00</span> $29.00</div>
+        </article>
+
+        <article class="product-card" data-id="2">
+          <div class="card-media">
+            <img src="prod2.jpg" alt="Bio-Shroom Rejuvenating Serum">
+            <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          </div>
+          <h3 class="product-name">Bio-Shroom Rejuvenating Serum</h3>
+          <div class="product-price">$29.00</div>
+        </article>
+
+        <article class="product-card" data-id="3">
+          <div class="card-media">
+            <img src="prod3.jpg" alt="Centella Soothing Toner">
+            <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          </div>
+          <h3 class="product-name">Centella Soothing Toner</h3>
+          <div class="product-price">$24.00</div>
+        </article>
+
+        <article class="product-card" data-id="4">
+          <div class="card-media">
+            <img src="prod4.jpg" alt="Hydration Hero Cream">
+            <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          </div>
+          <h3 class="product-name">Hydration Hero Cream</h3>
+          <div class="product-price"><span class="old-price">$32.00</span> $26.00</div>
+        </article>
+
+        <article class="product-card" data-id="5">
+          <div class="card-media">
+            <img src="prod5.jpg" alt="Brightening Essence">
+            <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          </div>
+          <h3 class="product-name">Brightening Essence</h3>
+          <div class="product-price">$22.00</div>
+        </article>
+
+        <article class="product-card" data-id="6">
+          <div class="card-media">
+            <img src="prod6.jpg" alt="Niacinamide 10% Serum">
+            <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          </div>
+          <h3 class="product-name">Niacinamide 10% Serum</h3>
+          <div class="product-price">$18.00</div>
+        </article>
+
+        <article class="product-card" data-id="7">
+          <div class="card-media">
+            <img src="prod7.jpg" alt="Daily Mineral Sunscreen SPF50">
+            <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          </div>
+          <h3 class="product-name">Daily Mineral Sunscreen SPF50</h3>
+          <div class="product-price">$20.00</div>
+        </article>
+
+        <article class="product-card" data-id="8">
+          <div class="card-media">
+            <img src="prod8.jpg" alt="Overnight Repair Mask">
+            <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          </div>
+          <h3 class="product-name">Overnight Repair Mask</h3>
+          <div class="product-price"><span class="old-price">$34.00</span> $28.00</div>
+        </article>
       </div>
     </div>
-
-    <div class="footer-column">
-      <h4>HELP</h4>
-      <ul>
-        <li><a href="#">Stores</a></li>
-        <li><a href="#">Become A Partner</a></li>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>POLICY</h4>
-      <ul>
-        <li><a href="#">Shipping Policy</a></li>
-        <li><a href="#">Refund Policy</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>Subscribe to our emails</h4>
-      <form class="subscribe-form">
-        <input type="email" placeholder="Email" />
-        <button type="submit">SUBSCRIBE</button>
-      </form>
-      <p>Craver Corporation<br>
-        CEO: Juhyck Cheun<br>
-        Company Location: 11th-12th Floor, Gangnam N Tower, 129 Teheran-ro, Gangnam-gu, Seoul, Republic of Korea<br>
-        Company Registration Number: 261-81-14845
-      </p>
-      <p><strong>FLAGSHIP STORE</strong><br>
-        29, Myeongdong 6-gil, Jung-gu, Seoul, Republic of Korea
-      </p>
-    </div>
-
+    <div class="bs-dots" aria-hidden="true"></div>
   </div>
-</footer>
-<script>
-const slides = document.querySelectorAll('.slide');
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
-let current = 0;
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    if (i === index) {
-      slide.classList.add('active');
-    }
+    <div class="carousel-dots"></div>
+
+</section>
+
+  <!-- Product Line Section -->
+  <section class="product-line">
+    <h2>Explore Our Product Line</h2>
+    <div class="line-grid">
+      <div class="line-item" style="background-image: url('The\ Ordinary.jpg');">
+        <div class="line-text">
+          <h3>Centella Series</h3>
+          <p>Soothing care for sensitive skin</p>
+        </div>
+      </div>
+      <div class="line-item" style="background-image: url('images/line2.jpg');">
+        <div class="line-text">
+          <h3>Glow Boosters</h3>
+          <p>Brighten and energize dull skin</p>
+        </div>
+      </div>
+      <div class="line-item" style="background-image: url('images/line3.jpg');">
+        <div class="line-text">
+          <h3>Hydration Heroes</h3>
+          <p>Deep moisture without heaviness</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // ===== HERO SLIDER =====
+  const sliderTrack = document.querySelector('.slider-track');
+  const dots = document.querySelectorAll('.dot');
+  const slides = document.querySelectorAll('.slide');
+  const slider = document.querySelector('.slider-container');
+
+  let index = 0;
+  let isDragging = false;
+  let startX = 0;
+  let currentX = 0;
+
+  function goToSlide(i) {
+    index = (i + slides.length) % slides.length;
+    sliderTrack.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
+
+  // Auto scroll every 5s
+  let auto = setInterval(() => goToSlide(index + 1), 5000);
+
+  // Dot click
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      clearInterval(auto);
+      goToSlide(Number(dot.dataset.index));
+      auto = setInterval(() => goToSlide(index + 1), 5000);
+    });
   });
-}
 
-function nextSlide() {
-  current = (current + 1) % slides.length;
-  showSlide(current);
-}
+  dots.forEach((dot, idx) => {
+  dot.dataset.index = idx; // ensure index is set
+  dot.addEventListener('click', () => {
+    clearInterval(autoSlide);
+    goToSlide(idx);       // use the correct index
+    autoSlide = setInterval(() => goToSlide(index + 1), 5000);
+  });
+});
 
-function prevSlide() {
-  current = (current - 1 + slides.length) % slides.length;
-  showSlide(current);
-}
+  // Drag / swipe
+  slider.addEventListener("pointerdown", (e) => {
+    isDragging = true;
+    startX = e.clientX;
+  });
+  slider.addEventListener("pointermove", (e) => {
+    if (!isDragging) return;
+    currentX = e.clientX;
+  });
+  slider.addEventListener("pointerup", () => {
+    if (!isDragging) return;
+    const diff = currentX - startX;
+    if (diff > 50) goToSlide(index - 1);
+    if (diff < -50) goToSlide(index + 1);
+    isDragging = false;
+  });
+  slider.addEventListener("pointerleave", () => { isDragging = false; });
+  goToSlide(index);
 
-next.addEventListener('click', nextSlide);
-prev.addEventListener('click', prevSlide);
+  // ===== CART COUNT =====
+  let cartCount = 0;
+  const cartCountElement = document.getElementById("cart-count");
 
-// Auto-slide every 5 seconds
-setInterval(nextSlide, 5000);
+  const addToCartButtons = document.querySelectorAll(".product-card button");
+  addToCartButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      cartCount++;
+      cartCountElement.textContent = cartCount;
+    });
+  });
 
+  // ===== HAMBURGER =====
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+
+  // ===== BEST SELLERS CAROUSEL =====
+  (function(){
+    const carousel   = document.querySelector('.best-sellers .bs-carousel');
+    const track      = document.querySelector('.best-sellers .bs-track');
+    const cards      = Array.from(document.querySelectorAll('.best-sellers .product-card'));
+    const dotsWrap   = document.querySelector('.best-sellers .bs-dots');
+    const cartCountEl= document.getElementById('cart-count');
+
+    if (!carousel || !track || cards.length === 0) return;
+
+    let perView    = getPerView();
+    let page       = 0;
+    let totalPages = Math.max(1, Math.ceil(cards.length / perView));
+    let isDown     = false;
+    let startX     = 0;
+    let lastX      = 0;
+
+    makeDots();
+    goTo(0);
+    tiltBind();
+    bindAddToCart();
+
+    // Resize
+    window.addEventListener('resize', () => {
+      perView = getPerView();
+      totalPages = Math.max(1, Math.ceil(cards.length / perView));
+      makeDots();
+      goTo(Math.min(page, totalPages - 1), true);
+    });
+
+    // Drag / swipe
+    carousel.addEventListener('pointerdown', (e) => {
+      isDown = true;
+      carousel.classList.add('grabbing');
+      startX = e.clientX;
+      lastX  = e.clientX;
+    });
+    window.addEventListener('pointermove', (e) => {
+      if (!isDown) return;
+      lastX = e.clientX;
+    });
+    window.addEventListener('pointerup', () => {
+      if (!isDown) return;
+      const dx = lastX - startX;
+      if (dx > 50) goTo(page - 1);
+      if (dx < -50) goTo(page + 1);
+      isDown = false;
+      carousel.classList.remove('grabbing');
+    });
+    carousel.addEventListener('pointerleave', () => {
+      isDown = false;
+      carousel.classList.remove('grabbing');
+    });
+
+    // Keyboard navigation
+    carousel.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') goTo(page - 1);
+      if (e.key === 'ArrowRight') goTo(page + 1);
+    });
+
+    function getPerView() {
+      const w = window.innerWidth;
+      if (w <= 560) return 1;
+      if (w <= 900) return 2;
+      if (w <= 1200) return 3;
+      return 4;
+    }
+
+    function goTo(p, instant=false) {
+      page = (p + totalPages) % totalPages;
+      const pageWidth = carousel.clientWidth;
+      track.style.transitionDuration = instant ? '0ms' : '600ms';
+      track.style.transform = `translateX(-${page * pageWidth}px)`;
+      highlightDot(page);
+    }
+
+    function makeDots() {
+      dotsWrap.innerHTML = '';
+      for (let i = 0; i < totalPages; i++) {
+        const span = document.createElement('span');
+        span.className = 'bs-dot' + (i === page ? ' active' : '');
+        span.dataset.index = i;
+        dotsWrap.appendChild(span);
+      }
+    }
+    function highlightDot(i) {
+      [...dotsWrap.children].forEach((d, idx) => {
+        d.classList.toggle('active', idx === i);
+      });
+    }
+
+    // Tilt effect
+    function tiltBind() {
+      cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width;
+          const y = (e.clientY - rect.top)  / rect.height;
+          const rx = (0.8 - y) * 4;
+          const ry = (x - 0.5) * 4;
+          card.style.transform = `translateY(-6px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+        });
+        card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+      });
+    }
+
+    // Add-to-cart + confetti
+    function bindAddToCart() {
+      const buttons = document.querySelectorAll('.best-sellers .add-to-cart');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const btnRect = btn.getBoundingClientRect();
+          bumpCart();
+          confetti(btn, btnRect.width/2, 0);
+          btn.animate([{ transform: 'translateY(0) scale(1)' }, { transform: 'translateY(-2px) scale(1.03)' }, { transform: 'translateY(0) scale(1)' }], { duration: 220, easing: 'ease-out' });
+        });
+      });
+    }
+
+    function bumpCart() {
+      let count = parseInt(cartCountEl.textContent || '0', 10);
+      count += 1;
+      cartCountEl.textContent = count;
+      cartCountEl.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.25)' }, { transform: 'scale(1)' }], { duration: 220, easing: 'ease-out' });
+    }
+
+    function confetti(anchorEl, ox, oy) {
+      const host = anchorEl.closest('.product-card') || anchorEl.parentElement;
+      const hostRect = host.getBoundingClientRect();
+      const btnRect  = anchorEl.getBoundingClientRect();
+      const originX = btnRect.left - hostRect.left + ox;
+      const originY = btnRect.top  - hostRect.top  + oy;
+      const pieces = 14;
+      for (let i = 0; i < pieces; i++) {
+        const s = document.createElement('span');
+        s.className = 'confetti-piece';
+        const dx = (Math.random()*160 - 80) + 'px';
+        const dy = (-Math.random()*140 - 40) + 'px';
+        const rot = (Math.random()*540 - 270) + 'deg';
+        const hue = Math.floor(Math.random()*360);
+        s.style.background = `hsl(${hue} 80% 70%)`;
+        s.style.left = originX + 'px';
+        s.style.top  = originY + 'px';
+        s.style.setProperty('--dx', dx);
+        s.style.setProperty('--dy', dy);
+        s.style.setProperty('--rot', rot);
+        host.appendChild(s);
+        setTimeout(() => s.remove(), 750);
+      }
+    }
+
+  })();
+});
 </script>
 
 </body>
